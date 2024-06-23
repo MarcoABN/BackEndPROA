@@ -46,7 +46,7 @@ public class Cliente {
 	private String CPFCNPJ;
 	
 	@Column (name="datanasc")
-	private String dataNasc;
+	private Date dataNasc;
 	
 	@Column (name="telefone")
 	private String telefone;
@@ -86,7 +86,7 @@ public class Cliente {
 
 
 	public Cliente(OrgMilitar orgmilitar, Empresa empresa, Long iD, String nome, String rG, String orgEmissor,
-			Date dtEmissao, String cPFCNPJ, String dataNasc, String telefone, String celular, String email,
+			Date dtEmissao, String cPFCNPJ, Date dataNasc, String telefone, String celular, String email,
 			String senha, String cep, String logradouro, String numero, String complemento, String bairro,
 			String cidade, String uF) {
 		super();
@@ -157,11 +157,11 @@ public class Cliente {
 		CPFCNPJ = cPFCNPJ;
 	}
 
-	public String getDataNasc() {
+	public Date getDataNasc() {
 		return dataNasc;
 	}
 
-	public void setDataNasc(String dataNasc) {
+	public void setDataNasc(Date dataNasc) {
 		this.dataNasc = dataNasc;
 	}
 
